@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  auth_service:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+
+networks:
+  backend:
