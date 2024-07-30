@@ -13,11 +13,15 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
 COPY . .
 
-# Copy .env file
-COPY .env .env
+# Copy entrypoint script
+COPY entrypoint.sh /usr/src/app/entrypoint.sh
+
+# Make entrypoint script executable
+RUN chmod +x /usr/src/app/entrypoint.sh
+
 
 # Expose the application port
 EXPOSE 8000
 
-# Run the server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Set entrypoint
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]

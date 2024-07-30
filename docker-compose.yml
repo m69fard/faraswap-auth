@@ -1,7 +1,6 @@
-version: '3.8'
-
 services:
-  auth_service:
+  authentication:
+    container_name: authentication
     build:
       context: .
     volumes:
@@ -15,3 +14,4 @@ services:
 
 networks:
   backend:
+    name: backend
