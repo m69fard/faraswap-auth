@@ -30,3 +30,11 @@ API documentation is available at `/docs`.
     Use the following command to build and start the service:
 
     docker-compose up --build
+
+
+3 **Test the Application**
+
+    Use the following command to test the service:
+
+    docker compose exec authentication python manage.py test
+
