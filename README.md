@@ -32,7 +32,7 @@ API documentation is available at `/docs`.
     docker-compose up --build
 
 
-3 **Test the Application**
+3. **Test the Application**
 
     Use the following command to test the service:
 
